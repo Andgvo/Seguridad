@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <!--
 	Arcana by HTML5 UP
 	html5up.net | @ajlkn
@@ -6,11 +6,12 @@
 -->
 <html>
 	<head>
-		<title>Arcana by HTML5 UP</title>
+		<title>JVJ: Grupo Geminis</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="assets/js/jquery.min.js"></script>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
@@ -21,18 +22,23 @@
 				<div id="header">
 
 					<!-- Logo -->
-						<h1><a href="index.html" id="logo">Arcana <em>by HTML5 UP</em></a></h1>
+						<h1><a href="index.html" id="logo">
+							JVJ<em>Grupo Geminis</em><br>
+							<img src="images/Logo.jpg" height="100px" alt="">
+						</a></h1>
 
 					<!-- Nav -->
-						<nav id="nav">
+						<nav id="nav" class="navbar-collapse collapse navbar-fixed-top">
 							<ul>
-								<li class="current"><a href="index.html">Home</a></li>
+								<li class="current"><a class="page-scroll" href="#banner">Inicio</a></li>
+								<li ><a class="page-scroll" href="#conocer">Conocenos</a></li>
+								<li ><a class="page-scroll" href="#ubicacion">Ubicanos</a></li>
 								<li>
-									<a href="#">Dropdown</a>
+									<a class="page-scroll" href="#servicio">Servicios</a>
 									<ul>
-										<li><a href="#">Lorem dolor</a></li>
-										<li><a href="#">Magna phasellus</a></li>
-										<li><a href="#">Etiam sed tempus</a></li>
+										<li><a href="#">Logistico</a></li>
+										<li><a href="#">Adicionales</a></li>
+										<li><a href="#">Transporte</a></li>
 										<li>
 											<a href="#">Submenu</a>
 											<ul>
@@ -46,10 +52,13 @@
 										<li><a href="#">Veroeros feugiat</a></li>
 									</ul>
 								</li>
+								<li ><a class="page-scroll" href="#cta">Cotizar</a></li>
+								<li ><a class="page-scroll" href="#footer">Contactanos</a></li>
+								<!--
 								<li><a href="left-sidebar.html">Left Sidebar</a></li>
 								<li><a href="right-sidebar.html">Right Sidebar</a></li>
 								<li><a href="two-sidebar.html">Two Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
+								<li><a href="no-sidebar.html">No Sidebar</a></li>-->
 							</ul>
 						</nav>
 
@@ -57,15 +66,21 @@
 
 			<!-- Banner -->
 				<section id="banner">
+					<!--
 					<header>
 						<h2>Arcana: <em>A responsive site template freebie by <a href="http://html5up.net">HTML5 UP</a></em></h2>
 						<a href="#" class="button">Learn More</a>
 					</header>
+					-->
 				</section>
 
-			<!-- Highlights -->
-				<section class="wrapper style1">
+			<!-- Conocenos -->
+				<section id="conocer" class="wrapper style1">
 					<div class="container">
+						<header class="major">
+							<h2>Quienes somos</h2>
+							<p>VGL está conformada por un grupo de profesionales los cuales se mantienen actualizados sobre la normatividad vigente  y las  practicas necesarias para garantizar brindar un servicio integral que cumpla con las necesidades del cliente  inherente a la calidad y trato que nos caracteriza</p>
+						</header>
 						<div class="row 200%">
 							<section class="4u 12u(narrower)">
 								<div class="box highlight">
@@ -76,41 +91,46 @@
 							</section>
 							<section class="4u 12u(narrower)">
 								<div class="box highlight">
-									<i class="icon major fa-pencil"></i>
-									<h3>Also Important</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+									<i class="icon major fa-flag-checkered"></i>
+									<h3>MISION</h3>
+									<p>Ofrecer servicios integrales de seguridad con los más altos estándares de calidad, ajustándolos a las necesidades de nuestros clientes empleando soluciones innovadoras y eficaces.</p>
 								</div>
 							</section>
 							<section class="4u 12u(narrower)">
 								<div class="box highlight">
-									<i class="icon major fa-wrench"></i>
-									<h3>Probably Important</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+									<i class="icon major fa-trophy"></i>
+									<h3>VISION</h3>
+									<p>Consolidar a Vigilancia y Seguridad 365 Ltda como modelo de desarrollo empresarial en soluciones integrales de seguridad con reconocimiento a nivel nacional.</p>
 								</div>
 							</section>
 						</div>
 					</div>
 				</section>
 
-			<!-- Gigantic Heading -->
-				<section class="wrapper style2">
+				<!-- Ubicanos  -->
+				<section id="ubicacion" class="wrapper">
 					<div class="container">
 						<header class="major">
-							<h2>A gigantic heading you can use for whatever</h2>
-							<p>With a much smaller subtitle hanging out just below it</p>
+							<h2>Ubicanos</h2>
+							<p>Tenemos presencia en <b>toda</b> la republica</p>
+							<img src="images/Republica.png" alt="" />
 						</header>
 					</div>
 				</section>
 
-			<!-- Posts -->
-				<section class="wrapper style1">
+			<!-- Servicio -->
+				<section id="servicio" class="wrapper style1">
 					<div class="container">
+						<header class="major">
+							<h2>Te ofrecemos</h2>
+							<p></p>
+						</header>
 						<div class="row">
 							<section class="6u 12u(narrower)">
 								<div class="box post">
 									<a href="#" class="image left"><img src="images/pic01.jpg" alt="" /></a>
 									<div class="inner">
-										<h3>The First Thing</h3>
+										<h3>Servicio Logistico</h3>
 										<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
 									</div>
 								</div>
@@ -119,7 +139,7 @@
 								<div class="box post">
 									<a href="#" class="image left"><img src="images/pic02.jpg" alt="" /></a>
 									<div class="inner">
-										<h3>The Second Thing</h3>
+										<h3>Servicio Transporte</h3>
 										<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
 									</div>
 								</div>
@@ -130,7 +150,7 @@
 								<div class="box post">
 									<a href="#" class="image left"><img src="images/pic03.jpg" alt="" /></a>
 									<div class="inner">
-										<h3>The Third Thing</h3>
+										<h3>Servicio Adicional</h3>
 										<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
 									</div>
 								</div>
@@ -148,69 +168,45 @@
 					</div>
 				</section>
 
-			<!-- CTA -->
+			<!-- Cotización -->
 				<section id="cta" class="wrapper style3">
 					<div class="container">
-						<header>
-							<h2>Are you ready to continue your quest?</h2>
-							<a href="#" class="button">Insert Coin</a>
+						<header class="major">
+							<h2>¿Te intersa? Haz una cotización gratis</h2>
+							<a href="#" class="button">Iniciar</a>
 						</header>
 					</div>
 				</section>
 
 			<!-- Footer -->
-				<div id="footer">
+				<section id="footer">
 					<div class="container">
 						<div class="row">
-							<section class="3u 6u(narrower) 12u$(mobilep)">
-								<h3>Links to Stuff</h3>
-								<ul class="links">
-									<li><a href="#">Mattis et quis rutrum</a></li>
-									<li><a href="#">Suspendisse amet varius</a></li>
-									<li><a href="#">Sed et dapibus quis</a></li>
-									<li><a href="#">Rutrum accumsan dolor</a></li>
-									<li><a href="#">Mattis rutrum accumsan</a></li>
-									<li><a href="#">Suspendisse varius nibh</a></li>
-									<li><a href="#">Sed et dapibus mattis</a></li>
-								</ul>
-							</section>
-							<section class="3u 6u$(narrower) 12u$(mobilep)">
-								<h3>More Links to Stuff</h3>
-								<ul class="links">
-									<li><a href="#">Duis neque nisi dapibus</a></li>
-									<li><a href="#">Sed et dapibus quis</a></li>
-									<li><a href="#">Rutrum accumsan sed</a></li>
-									<li><a href="#">Mattis et sed accumsan</a></li>
-									<li><a href="#">Duis neque nisi sed</a></li>
-									<li><a href="#">Sed et dapibus quis</a></li>
-									<li><a href="#">Rutrum amet varius</a></li>
-								</ul>
-							</section>
-							<section class="6u 12u(narrower)">
-								<h3>Get In Touch</h3>
+							<div class="-2u 8u 12u(narrower)">
+								<h3>Envianos tus dudas</h3>
 								<form>
 									<div class="row 50%">
 										<div class="6u 12u(mobilep)">
-											<input type="text" name="name" id="name" placeholder="Name" />
+											<input type="text" name="name" id="name" placeholder="Nombre" />
 										</div>
 										<div class="6u 12u(mobilep)">
-											<input type="email" name="email" id="email" placeholder="Email" />
+											<input type="email" name="email" id="email" placeholder="Correo" />
 										</div>
 									</div>
 									<div class="row 50%">
 										<div class="12u">
-											<textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
+											<textarea name="message" id="message" placeholder="Mensaje" rows="5"></textarea>
 										</div>
 									</div>
 									<div class="row 50%">
 										<div class="12u">
 											<ul class="actions">
-												<li><input type="submit" class="button alt" value="Send Message" /></li>
+												<li><input type="submit" class="button alt" value="Enviar" /></li>
 											</ul>
 										</div>
 									</div>
 								</form>
-							</section>
+							</div>
 						</div>
 					</div>
 
@@ -230,17 +226,44 @@
 							</ul>
 						</div>
 
-				</div>
+				</section>
 
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script>
+				//Animación en Menú Stick
+				var $nav = $('#nav');
+				var $navTop = $nav.offset().top;
+				var pegarNav = function(){
+					var $scrollTop = $(window).scrollTop();
+					if($scrollTop >= $navTop){
+						$nav.addClass('stiky');
+						$('#banner').addClass('ajusteStiky');
+					}else{
+						$nav.removeClass('stiky');
+						$('#banner').removeClass('ajusteStiky');
+					}
+				}
 
+				$(window).on('scroll',pegarNav);
+
+				//Scroll en la página
+				$(document).ready(function () {
+			        // Page scrolling feature
+			        $('a.page-scroll').bind('click', function(event) {
+			            var link = $(this);
+			            $('html, body').stop().animate({
+			                scrollTop: $(link.attr('href')).offset().top -61
+			            }, 500);
+			            event.preventDefault();
+			        });
+			    });
+			</script>
 	</body>
 </html>
