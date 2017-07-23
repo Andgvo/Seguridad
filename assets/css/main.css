@@ -2342,7 +2342,7 @@
 
 	#header {
 		text-align: center;
-		padding: 3em 0 0 0;
+		padding: 0px;
 		background-color: #fff;
 		background-image: url("images/bg02.png"), url("images/bg02.png"), url("images/bg01.png");
 		background-position: top left,					top left,					top left;
@@ -2351,7 +2351,7 @@
 	}
 
 		#header h1 {
-			padding: 0 0 2.75em 0;
+			padding: 0 0 2em 0;
 			margin: 0;
 		}
 
@@ -2380,9 +2380,8 @@
 			content: '';
 			display: block;
 			width: 100%;
-			height: 0.75em;
+			height: 10px;
 			background-color: #EB3527;
-			background-image: url("images/bg01.png");
 		}
 
 		#nav > ul {
