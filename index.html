@@ -13,8 +13,10 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/animate.css" />
 		<link rel="stylesheet" href="assets/css/owl.carousel.css" />
+		<link rel="stylesheet" href="assets/css/owl.theme.default.css" />
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/owl.carousel.js"></script>
+		<script src="assets/js/jquery.sticky.js"></script>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
@@ -25,11 +27,16 @@
 				<div id="header">
 
 					<!-- Logo -->
-						<h1><a href="index.html" id="logo">
-							<img id='logoImg' style="vertical-align: middle;" src="images/Logo.jpg" height="100px">
-							JVJ <em>Grupo Geminis</em><br>
-						</a></h1>
-
+						<h1>
+							<a href="index.html" id="logo">
+								<img id='logoImg' style="vertical-align: middle;" src="images/Logo.jpg" height="100px">
+								JVJ <em>Grupo Geminis</em><br>
+							</a>
+						</h1>
+						<div class="-10u stiky contactos">
+							<span class="icon fa-phone-square"></span> Tel. 55-45-15-45-15 <br>
+							<span class="icon fa-envelope"></span> Empresa@correo.com
+						</div>
 					<!-- Nav -->
 						<nav id="nav" class="navbar-collapse collapse navbar-fixed-top">
 							<ul>
@@ -169,8 +176,10 @@
 						<header class="major">
 							<h2>Ubícanos</h2>
 							<p>Tenemos presencia en <b>toda</b> la republica</p>
-							<img src="images/Republica.png" width="40%" alt="" />
 						</header>
+						<div class="6u 12u(narrower)">
+							<img src="images/Republica.png" width="100%" alt="" />
+						</div>
 					</div>
 				</section>
 
@@ -182,13 +191,25 @@
 							<p></p>
 						</header>
 						<div class="row">
-							<div class="-2u 8u 12u(narrower)">						
+							<div class="7u 12u(narrower)">
+								
+								
+								<div id="owl-demo" class="owl-carousel owl-theme">
+									<div class="item"><img src="images/seg1.jpg" alt=""></div>
+									<div class="item"><img src="images/seg2.jpg" alt=""></div>
+									<div class="item"><img src="images/seg3.jpg" alt=""></div>
+								</div>
+
+
+<!-- -->
+							</div>
+							<div class="5u 12u(narrower)"  id='formulario1'>						
 								<form>
 									<div class="row 50%">
-										<div class="6u 12u(mobilep)">
+										<div class="12u 12u(mobilep)">
 											<input type="text" name="name" id="name" placeholder="Nombre" />
 										</div>
-										<div class="6u 12u(mobilep)">
+										<div class="12u 12u(mobilep)">
 											<input type="email" name="email" id="email" placeholder="Correo" />
 										</div>
 									</div>
@@ -224,7 +245,7 @@
 								<li>&copy; Untitled. Todos los derechos reservador</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
-
+						
 				</section>
 
 		</div>
@@ -246,33 +267,6 @@
 				var $ctaTop = $('#cta').offset().top;
 				var $footerTop = $('#footer').offset().top;
 				var $alturaNav = $('#nav').height();
-
-				$.fn.extend({   
-			        // Devuelve true si el elemento está en window
-			        isInScene : function(arg)
-			        {   
-			            // Fuerza que arg sea un objeto
-			            arg = arg || {};
-			            // Valor por defecto de desfase
-			            arg.desfase = arg.desfase || 0;
-			            // Fuerza a que desfase sea númerico
-			            arg.desfase = parseInt(arg.desfase,10);
-			     
-			            // Posición vertical del elemento respecto al principio del documento
-			            var pos_container = $(this).offset().top;
-			     
-			            // Altura del elemento
-			            var container_height = $(this).outerHeight();
-			     
-			            // Posición vertical de document
-			            var pos_document = $(document).scrollTop();
-			     
-			            // Alto ventana
-			            var window_height = $(window).height(); 
-			     
-			            return (pos_document+window_height > pos_container+arg.desfase && pos_container+container_height > pos_document+arg.desfase);
-			        }
-			    });
 				
 				var pegarNav = function(){
 					var $scrollTop = $(window).scrollTop();
@@ -281,28 +275,32 @@
 					if($scrollTop >= $navTop){
 						$nav.addClass('stiky');
 						$nav.css('background-color','#333');
+						$('.contactos').css('color','#fff');
 						//Arreglar el banner con espacio de barra
-						$('#banner').css('margin-top',$alturaNav);
+						$('#header').css('padding-bottom',$alturaNav);
+
+						$('li').removeClass('current');
+						if(($scrollTop+$alturaNav) >=$footerTop){
+							$('a[href$="footer"]').parent().addClass('current');
+						}else if(($scrollTop+$alturaNav) >=$ubicacionTop){
+							$('a[href$="ubicacion"]').parent().addClass('current');
+						}else if(($scrollTop+$alturaNav) >=$conocerTop){
+							$('a[href$="conocer"]').parent().addClass('current');
+						}else if(($scrollTop+$alturaNav) >=$ctaTop){
+							$('a[href$="cta"]').parent().addClass('current');
+						}else if(($scrollTop+$alturaNav) >=$servicioTop){
+							$('a[href$="servicio"]').parent().addClass('current');
+						}else if(($scrollTop+$alturaNav) >=$bannerTop){
+							$('a[href$="banner"]').parent().addClass('current');
+						}
 					}else{
 						$nav.removeClass('stiky');
 						$nav.css({'background-color':'transparent','height':'auto'});
-						$('#banner').css('margin-top','0');
+						$('.contactos').css('color','#333');
+						$('#header').css('padding-bottom','0');
 					}
 
-					$('li').removeClass('current');
-					if(($scrollTop+$alturaNav) >=$footerTop){
-						$('a[href$="footer"]').parent().addClass('current');
-					}else if(($scrollTop+$alturaNav) >=$ubicacionTop){
-						$('a[href$="ubicacion"]').parent().addClass('current');
-					}else if(($scrollTop+$alturaNav) >=$conocerTop){
-						$('a[href$="conocer"]').parent().addClass('current');
-					}else if(($scrollTop+$alturaNav) >=$ctaTop){
-						$('a[href$="cta"]').parent().addClass('current');
-					}else if(($scrollTop+$alturaNav) >=$servicioTop){
-						$('a[href$="servicio"]').parent().addClass('current');
-					}else if(($scrollTop+$alturaNav) >=$bannerTop){
-						$('a[href$="banner"]').parent().addClass('current');
-					}
+					
 				} 
 
 				//Scroll en la página
@@ -327,14 +325,21 @@
 					$servicioTop = $('#servicio').offset().top;
 					$ctaTop = $('#cta').offset().top;
 					$footerTop = $('#footer').offset().top;
-					$alturaNav = $('#nav').height();   
+					$alturaNav = $('#nav').height();
+					$navTop = $('#header').outerHeight()-$alturaNav;   
 				});
-				/*
-				$(window).bind("resizeEnd", function() {
-				   // Acción
-				   alert("Termino de Cambiar|");
-				});*/
-
+				
+				$('.loop').owlCarousel({
+				    center: true,
+				    items:2,
+				    loop:true,
+				    margin:10,
+				    responsive:{
+				        600:{
+				            items:4
+				        }
+				    }
+				});
 			</script>
 	</body>
 </html>

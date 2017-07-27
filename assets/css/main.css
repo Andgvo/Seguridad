@@ -18,6 +18,11 @@
 		vertical-align: baseline;
 	}
 
+	html,body{
+		height: 100%;
+		width: 100%;
+	}
+
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
@@ -2374,9 +2379,13 @@
 	.stiky {
 		position: fixed;
 		top: 0;
-		background-color: #333;
 	}
-
+	
+	.contactos{
+		padding-top: 4px;
+		text-align: left;
+		z-index: 2;
+	}
 	
 		#nav:after {
 			content: '';
