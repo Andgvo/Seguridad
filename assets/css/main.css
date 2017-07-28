@@ -3083,6 +3083,11 @@
 			#logoImg{
 				display: none;
 			}
+			
+			.bannerContent{
+				padding: 1em 1.5em 1em 1.5em;
+				margin-left: 1em;
+			}
 
 			header p {
 				margin-top: -0.5em;
@@ -3188,6 +3193,11 @@
 				#banner header {
 					padding: 20px;
 				}
+
+			.bannerContent{
+				padding: 1em 1.5em 1em 1.5em;
+				margin-left: 0.5em;
+			}
 
 		/* Wrapper */
 
